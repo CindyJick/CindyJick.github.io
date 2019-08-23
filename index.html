@@ -10,12 +10,12 @@
 } </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">CindyJick</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">2</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">1</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">灰灰的博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="site-info"><div id="site-title">灰灰的博客</div><div id="site-sub-title">Good Good Study,Day Day Up!!!</div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2019/08/23/hexo-admin管理hexo文章/">hexo-admin管理hexo文章</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-08-23</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/技术/">技术</a></span><div class="content"><h3 id="1-安装hexo-admin"><a href="#1-安装hexo-admin" class="headerlink" title="1.安装hexo-admin"></a>1.安装hexo-admin</h3><p>键入npm install –save hexo-admin</p>
 <h3 id="2-重新启动hexo"><a href="#2-重新启动hexo" class="headerlink" title="2.重新启动hexo"></a>2.重新启动hexo</h3><p>键入hexo server -d</p>
 <h3 id="3-访问admin页面"><a href="#3-访问admin页面" class="headerlink" title="3.访问admin页面"></a>3.访问admin页面</h3><p>在浏览器上访问 yourip:4000/admin</p>
-<p><img src="/images/pasted-0.png" alt="upload successful"></p>
+<p><img src="/_posts/hexo-admin%E7%AE%A1%E7%90%86hexo%E6%96%87%E7%AB%A0/pasted-0.png" alt="upload successful"></p>
 <h3 id="4-设置amdin登陆拦截"><a href="#4-设置amdin登陆拦截" class="headerlink" title="4.设置amdin登陆拦截"></a>4.设置amdin登陆拦截</h3><ol>
-<li>先在admin页面中点击”Settings”选项卡<br><img src="/images/pasted-1.png" alt="upload successful"></li>
-<li>接着点击”Setup authentification here”<br><img src="/images/pasted-2.png" alt="upload successful"></li>
-<li>填入设置”用户名”、”密码”、”密文”<br><img src="/images/pasted-3.png" alt="upload successful"></li>
-<li>将在下方生成的代码贴到博客根目录下的_config.yml文件中<br><img src="/images/pasted-4.png" alt="upload successful"></li>
+<li>先在admin页面中点击”Settings”选项卡<br><img src="/_posts/hexo-admin%E7%AE%A1%E7%90%86hexo%E6%96%87%E7%AB%A0/pasted-1.png" alt="upload successful"></li>
+<li>接着点击”Setup authentification here”<br><img src="/_posts/hexo-admin%E7%AE%A1%E7%90%86hexo%E6%96%87%E7%AB%A0/pasted-2.png" alt="upload successful"></li>
+<li>填入设置”用户名”、”密码”、”密文”<br><img src="/_posts/hexo-admin%E7%AE%A1%E7%90%86hexo%E6%96%87%E7%AB%A0/pasted-3.png" alt="upload successful"></li>
+<li>将在下方生成的代码贴到博客根目录下的_config.yml文件中<br><img src="/_posts/hexo-admin%E7%AE%A1%E7%90%86hexo%E6%96%87%E7%AB%A0/pasted-4.png" alt="upload successful"></li>
 </ol>
 <h3 id="5-设置deploy键调用生成和部署脚本"><a href="#5-设置deploy键调用生成和部署脚本" class="headerlink" title="5.设置deploy键调用生成和部署脚本"></a>5.设置deploy键调用生成和部署脚本</h3><p><strong>注</strong> :该配置针对linux服务器，windows的可能略有不同</p>
 <ol>
@@ -31,7 +31,7 @@
 <li><p>进入根目录下的配置文件</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-admin authentification</span></span><br><span class="line"><span class="attr">admin:</span></span><br><span class="line"><span class="attr">  deployCommand:</span> <span class="string">'./hexo-generate.sh'</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>重新生成并重启后即可一键生成和部署<br><img src="/images/pasted-7.png" alt="upload successful"></p>
+<li><p>重新生成并重启后即可一键生成和部署<br><img src="/_posts/hexo-admin%E7%AE%A1%E7%90%86hexo%E6%96%87%E7%AB%A0/pasted-7.png" alt="upload successful"></p>
 </li>
 </ol>
 </div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/08/23/hello-world/">Hello World</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-08-23</time><div class="content"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
