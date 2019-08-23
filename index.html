@@ -15,6 +15,24 @@
 <li>先在admin页面中点击”Settings”选项卡<br><img src="/images/pasted-1.png" alt="upload successful"></li>
 <li>接着点击”Setup authentification here”<br><img src="/images/pasted-2.png" alt="upload successful"></li>
 <li>填入设置”用户名”、”密码”、”密文”<br><img src="/images/pasted-3.png" alt="upload successful"></li>
+<li>将在下方生成的代码贴到博客根目录下的_config.yml文件中<br><img src="/images/pasted-4.png" alt="upload successful"></li>
+</ol>
+<h3 id="5-设置deploy键调用生成和部署脚本"><a href="#5-设置deploy键调用生成和部署脚本" class="headerlink" title="5.设置deploy键调用生成和部署脚本"></a>5.设置deploy键调用生成和部署脚本</h3><p><strong>注</strong> :该配置针对linux服务器，windows的可能略有不同</p>
+<ol>
+<li><p>新建一个.sh文件(假设建在根目录下)，例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch script-name.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑脚本:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env sh</span><br><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x script-name.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入根目录下的配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-admin authentification</span></span><br><span class="line"><span class="attr">admin:</span></span><br><span class="line"><span class="attr">  deployCommand:</span> <span class="string">'./hexo-generate.sh'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新生成并重启后即可一键生成和部署</p>
+</li>
 </ol>
 </div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/08/23/hello-world/">Hello World</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-08-23</time><div class="content"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
