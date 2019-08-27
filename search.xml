@@ -8,7 +8,7 @@
       <link href="/2019/08/24/%E7%82%B9%E4%B8%8E%E5%A4%9A%E8%BE%B9%E5%BD%A2/"/>
       <url>/2019/08/24/%E7%82%B9%E4%B8%8E%E5%A4%9A%E8%BE%B9%E5%BD%A2/</url>
       
-        <content type="html"><![CDATA[<h2 id="判断一个点是否在多边形内部"><a href="#判断一个点是否在多边形内部" class="headerlink" title="判断一个点是否在多边形内部"></a>判断一个点是否在多边形内部</h2><p>转自参考链接 侵删<a href="https://www.cnblogs.com/anningwang/p/7581545.html" target="_blank" rel="noopener">https://www.cnblogs.com/anningwang/p/7581545.html</a></p><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>阿里巴巴模拟笔试有一道编程题，大意为:已知在一个二维平面上，有一个坐标点和一个多边形，多边形的点已数组的方式按链接顺序存放，且第一个点与最后一个点相连。判断坐标点是否在多边形内部？如果在外部则给出距离多边形的最短距离？</p><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3>]]></content>
+        <content type="html"><![CDATA[<h2 id="判断一个点是否在多边形内部"><a href="#判断一个点是否在多边形内部" class="headerlink" title="判断一个点是否在多边形内部"></a>判断一个点是否在多边形内部</h2><p>转自参考链接 侵删 <a href="https://www.cnblogs.com/anningwang/p/7581545.html" target="_blank" rel="noopener">https://www.cnblogs.com/anningwang/p/7581545.html</a></p><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>阿里巴巴模拟笔试有一道编程题，大意为:已知在一个二维平面上，有一个坐标点和一个多边形，多边形的点已数组的方式按链接顺序存放，且第一个点与最后一个点相连。判断坐标点是否在多边形内部？如果在外部则给出距离多边形的最短距离？</p><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><h4 id="1-射线法"><a href="#1-射线法" class="headerlink" title="1.射线法"></a>1.射线法</h4><ul><li>分别取多边形各顶点<strong>横、纵</strong>坐标的最大、最小值=&gt;用矩形将多边形框住(排除在框外的点)</li><li>假设<strong>待测点</strong>向右方延伸出一条<strong>射线</strong></li><li>计算多边形的每条边与这条射线的交点个数(注意特例)</li><li>根据交点个数的奇偶判断待测点与多边形的关系<img src="/2019/08/24/点与多边形/pasted-0.png" title="正常情况:点在多边形外"><img src="/2019/08/24/点与多边形/pasted-1.png" title="正常情况:点在多边形内"></li></ul>]]></content>
       
       
       <categories>
