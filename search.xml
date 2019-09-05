@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>剑指offer——斐波那契数列</title>
+      <link href="/2019/09/04/%E5%89%91%E6%8C%87offer%E2%80%94%E2%80%94%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/"/>
+      <url>/2019/09/04/%E5%89%91%E6%8C%87offer%E2%80%94%E2%80%94%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一-题目"><a href="#一-题目" class="headerlink" title="一. 题目"></a>一. 题目</h3><p><a href="https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">题目描述</a></p><p>大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。<br>n&lt;=39</p><h3 id="二-思路"><a href="#二-思路" class="headerlink" title="二. 思路"></a>二. 思路</h3><h4 id="1-初始思路"><a href="#1-初始思路" class="headerlink" title="1. 初始思路"></a>1. 初始思路</h4><p>斐波那契数列公式为 f(n) = f(n - 1) + f(n - 2) (n &gt;= 2)，因此可以用递归的方式实现。  </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> n &lt;= <span class="number">0</span> ? <span class="number">0</span> : <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Fibonacci(n - <span class="number">1</span>) + Fibonacci(n - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="2-参考思路"><a href="#2-参考思路" class="headerlink" title="2. 参考思路"></a>2. 参考思路</h4><p>由于当参数过大时使用递归可能会导致递归树过大，因此使用循环来处理这个问题；</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> preNum = <span class="number">0</span>, pPreNum = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (n-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            preNum += pPreNum;</span><br><span class="line">            pPreNum = preNum - pPreNum;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> preNum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>剑指offer——旋转数组的最小值</title>
       <link href="/2019/09/04/%E5%89%91%E6%8C%87offer%E2%80%94%E2%80%94%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/"/>
       <url>/2019/09/04/%E5%89%91%E6%8C%87offer%E2%80%94%E2%80%94%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/</url>
