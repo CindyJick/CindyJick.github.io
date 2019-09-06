@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>剑指offer——调整数组顺序使奇数位于偶数前面</title>
+      <link href="/2019/09/06/%E5%89%91%E6%8C%87offer%E2%80%94%E2%80%94%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/"/>
+      <url>/2019/09/06/%E5%89%91%E6%8C%87offer%E2%80%94%E2%80%94%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一-题目"><a href="#一-题目" class="headerlink" title="一. 题目"></a>一. 题目</h3><p><a href="https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593?tpId=13&amp;tqId=11166&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">题目描述</a></p><p>输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。</p><h3 id="二-思路"><a href="#二-思路" class="headerlink" title="二. 思路"></a>二. 思路</h3><h4 id="1-初始思路"><a href="#1-初始思路" class="headerlink" title="1. 初始思路"></a>1. 初始思路</h4><p>1). 从头到尾遍历数组<br>2). 如果遇到奇数，那么将(上一个奇数，当前奇数)的值都往后挪动一位<br>3). 挪动完成后，将当前奇数拷贝到上一个奇数的后面</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reOrderArray</span><span class="params">(<span class="keyword">int</span> [] array)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> index = -<span class="number">1</span>, temp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[i] % <span class="number">2</span> != <span class="number">0</span>) &#123;</span><br><span class="line">                ++index;</span><br><span class="line">                temp = array[i];</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= index; --j) &#123;</span><br><span class="line">                    array[j + <span class="number">1</span>] = array[j];</span><br><span class="line">                &#125;</span><br><span class="line">                array[index] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="2-参考思路"><a href="#2-参考思路" class="headerlink" title="2. 参考思路"></a>2. 参考思路</h4><p>还有可以通过空间换时间的方式来做，new一个新数组，将奇数拷贝到前面，将偶数拷贝到后面，此处不贴出代码</p><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>剑指offer——数值的整数次方</title>
       <link href="/2019/09/05/%E5%89%91%E6%8C%87offer%E2%80%94%E2%80%94%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/"/>
       <url>/2019/09/05/%E5%89%91%E6%8C%87offer%E2%80%94%E2%80%94%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/</url>
